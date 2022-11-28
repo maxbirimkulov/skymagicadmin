@@ -1,0 +1,117 @@
+.aside{
+  max-width: 270px;
+  width: 20%;
+  background: #0A293D90;
+  min-width: 250px;
+  height: 100vh;
+  position: relative;
+  transition: .5s;
+
+  &__top{
+    color: white;
+    background:#0A293d ;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    right: 0;
+    transition: .5s;
+  }
+  &__dashboard{
+    transition: .5s;
+    position: relative;
+    right: 0;
+  }
+  &__content{
+    transition: .5s;
+    position: relative;
+    right: 0;
+  }
+  &__title{
+    margin-bottom: 10px;
+  }
+  &__link{
+    width: 100%;
+    height: 50px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    transition: .5s;
+    color: #0A293D;
+    font-size: 20px;
+    &_top.active{
+      border-top: 1px solid white;
+    }
+    svg{
+      transition: .5s;
+    }
+    &.active{
+      color: white;
+      background: #0A293D;
+      svg{
+        transform: rotate(180deg);
+        transition: .5s;
+      }
+    }
+    &:hover{
+      color: white;
+      transition: .5s;
+      background: #0A293D;
+    }
+  }
+  &__main{
+    margin: 20px 0;
+    text-align: center;
+    color: #0A293D;
+    font-size: 25px;
+  }
+  &__show{
+    width: 100%;
+    height: 50px;
+    background: #0A293D;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px  20px 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    &-icon{
+      cursor: pointer;
+      svg{
+        transform: rotate(180deg);
+      }
+      &.hide{
+        svg{
+          transform: rotate(0);
+        }
+      }
+    }
+
+  }
+  &.hide{
+    max-width:70px;
+    min-width: 70px;
+    transition: .5s;
+    background: #0A293D;
+    .aside__top{
+      position: relative;
+      right: 200px;
+      transition: .5s;
+    }
+    .aside__dashboard{
+      position: relative;
+      right: 200px;
+      transition: .5s;
+    }
+    .aside__content{
+      position: relative;
+      right: 200px;
+      transition: .5s;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.header{
+  padding: 20px 40px 0;
+  background: #0A293D90;
+  color: #0A293D;
+  &__title{
+    padding-bottom: 20px;
+  }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__icon{
+    font-size: 35px;
+    cursor: pointer;
+    padding-bottom: 15px;
+  }
+  &__right{
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  &__users{
+    display: flex;
+    flex-direction: column;
+    &-name{
+      font-size: 18px;
+    }
+    &-role{
+      font-size: 16px;
+      padding-bottom: 20px;
+    }
+  }
+  .header__show{
+    display: none;
+  }
+  &__right:hover{
+    .header__show{
+      &::before{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: #0A293D;
+        position: absolute;
+        top: -15px;
+        right: 15px;
+        clip-path: polygon(50% 15%, 0% 100%, 100% 100%);
+      }
+      min-width: 200px;
+      max-width: 250px;
+      position: absolute;
+      color: white;
+      display: block;
+      top: 48px;
+      border-radius: 5px;
+      border: 1px solid  #0A293D;
+      &-top{
+
+        padding: 20px 30px;
+        background: #0A293D;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        white-space: nowrap;
+      }
+      &-list{
+        display: flex;
+        padding: 20px 30px;
+        row-gap: 10px;
+        flex-direction: column;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: #ebedef;
+      }
+      &-link{
+        color: #0A293D;
+        transition: .5s;
+        font-size: 18px;
+        &:hover{
+          transition: .5s;
+          text-decoration: underline;
+          text-underline-offset:5px;
+        }
+      }
+    }
+  }
+
+}
