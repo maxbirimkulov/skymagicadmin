@@ -11,6 +11,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import OneUser from "./pages/Users/OneUser";
 import Create from "./pages/Banners/Create/Create";
+import OneVacancies from "./pages/Vacancies/OneVacancies";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                 <Route path={'orders'} element={<Orders/>}/>
                 <Route path={'users'} element={<Users/>}/>
                 <Route path={'users/:id'} element={<OneUser/>}/>
+                <Route path={'vacancies/:id'} element={<OneVacancies/>}/>
                 <Route path={'banners'} element={<Banners/>}/>
                 <Route path={'banners/create'} element={<Create/>}/>
             </Route>
