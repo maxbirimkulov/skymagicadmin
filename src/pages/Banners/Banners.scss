@@ -58,7 +58,7 @@
   }
   &__btn-wrapper{
     display: flex;
-    justify-content: space-between;
+    column-gap: 20px;
     align-items: center;
     padding: 3px;
 

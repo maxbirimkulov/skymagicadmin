@@ -11,6 +11,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import OneUser from "./pages/Users/OneUser";
 import Create from "./pages/Banners/Create/Create";
+import OneBanner from "./pages/Banners/OneBanner/OneBanner";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                 <Route path={'users/:id'} element={<OneUser/>}/>
                 <Route path={'banners'} element={<Banners/>}/>
                 <Route path={'banners/create'} element={<Create/>}/>
+                <Route path={'banners/edit/:id'} element={<OneBanner/>}/>
             </Route>
 
             <Route path='/login' element={<Login/>}/>
