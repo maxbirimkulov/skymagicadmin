@@ -10,6 +10,7 @@ import Banners from "./pages/Banners/Banners";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import OneUser from "./pages/Users/OneUser";
+import Create from "./pages/Banners/Create/Create";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                 <Route path={'users'} element={<Users/>}/>
                 <Route path={'users/:id'} element={<OneUser/>}/>
                 <Route path={'banners'} element={<Banners/>}/>
+                <Route path={'banners/create'} element={<Create/>}/>
             </Route>
 
             <Route path='/login' element={<Login/>}/>

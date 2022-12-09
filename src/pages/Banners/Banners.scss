@@ -1,0 +1,59 @@
+.banners{
+  .container{
+    padding: 30px 0;
+
+  }
+  &__bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+   &__wrapper{
+     padding: 10px 0 ;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+     row-gap: 30px;
+   }
+  &__btn{
+    padding: 7px 20px;
+    font-size: 15px;
+    border: none;
+    &_blue{
+      background: #428bca;
+      color: #ffffff;
+    }
+    &_green{
+      background: #42ca96;
+      color: #ffffff;
+    }
+    &:hover{
+       color: #f8cf40;
+      transform: translateY(-5px);
+    }
+    &:active{
+      background: #f8cf40;
+    }
+  }
+}
+.banner{
+  padding: 0 10px;
+  background: pink;
+  &__img{
+    background: red;
+    width: 350px;
+    height: 200px;
+  }
+  &__location{
+    text-align: right;
+  }
+  &__btn-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+
+  }
+
+}
