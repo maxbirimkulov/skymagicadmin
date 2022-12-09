@@ -10,11 +10,13 @@ import {
     REGISTER, } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import users from './reducers/users'
+import banners from './reducers/banners'
 import user from "./reducers/user";
 
 const rootReducer  = combineReducers({
     user,
-    users
+    users,
+    banners
 })
 
 const persistConfig = {
