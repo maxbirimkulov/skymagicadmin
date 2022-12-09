@@ -27,7 +27,7 @@ const Banners = () => {
                         <h3 className="banner__location">Цум</h3>
                         <div className="banner__btn-wrapper">
                             <button className="banner__edit banners__btn banners__btn_blue">Изменить</button>
-                            <button className="banner__delete banners__btn">Удалить</button>
+                            <button className="banner__delete banners__btn banners__btn_red">Удалить</button>
                         </div>
                     </div>
                 </div>

@@ -21,11 +21,15 @@
     font-size: 15px;
     border: none;
     &_blue{
-      background: #428bca;
+      background: #104e85;
       color: #ffffff;
     }
     &_green{
-      background: #42ca96;
+      background: #0c6744;
+      color: #ffffff;
+    }
+    &_red{
+      background: #640a0a;
       color: #ffffff;
     }
     &:hover{
