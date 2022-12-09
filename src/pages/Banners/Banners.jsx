@@ -41,8 +41,9 @@ const Banners = () => {
                                     data.map((item) => (
                                         <div className="banner">
                                             <div className="banner__img">
-                                                <img src="" alt={item.title}/>
+                                                <img src={`http://localhost:4444${item.images}`} alt={item.title}/>
                                             </div>
+
                                             <h2 className="banner__title">{item.title}</h2>
                                             <p className="banner__description">{item.text}</p>
                                             <h3 className="banner__location">{item.branch}</h3>

@@ -1,9 +1,8 @@
 import React, {useRef, useState} from 'react';
-import axios from "axios";
+import axios from "../../utils/axios";
 import {Button} from "@mui/material";
 
-const ClothesAddBtn = ({num}) => {
-    const [images,setImages] = useState()
+const ClothesAddBtn = ({num,images,setImages}) => {
     const image = useRef()
 
     const handleChangeImage1 = async (e) => {
@@ -30,7 +29,7 @@ const ClothesAddBtn = ({num}) => {
             {
                 images && (
                     <>
-                        <img style={{width:'100px', margin: '0 20px'}} src={`${process.env.REACT_APP_URL}${images}`} alt="Uploaded"/>
+                        <img style={{width:'100px', margin: '0 20px'}} src={`http://localhost:4444${images}`} alt="Uploaded"/>
                         <Button style={{width:'200px'}} onClick={() => setImages('')} type='button' variant="contained">Удалить картинку</Button>
                     </>
                 )
