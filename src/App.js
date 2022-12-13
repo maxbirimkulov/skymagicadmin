@@ -13,13 +13,11 @@ import OneUser from "./pages/Users/OneUser";
 import Create from "./pages/Banners/Create/Create";
 import OneBanner from "./pages/Banners/OneBanner/OneBanner";
 import OneVacancies from "./pages/Vacancies/OneVacancies";
-<<<<<<< HEAD
 import Gallery from "./pages/Gallery/Gallery";
 import CreatePhoto from "./pages/Gallery/CreatePhoto/CreatePhoto";
 import OnePhoto from "./pages/Gallery/OnePhoto/OnePhoto";
-=======
 import CreateVacancies from "./pages/Vacancies/Create/CreateVacancies";
->>>>>>> 959793e1d96599bc1069d8acb03c7d371e7f206a
+
 
 
 function App() {
