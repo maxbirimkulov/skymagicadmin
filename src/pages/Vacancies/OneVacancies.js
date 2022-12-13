@@ -2,12 +2,14 @@ import React from 'react';
 import './OneVacancies.scss'
 import {BiArrowBack} from 'react-icons/bi'
 import {GoLocation} from 'react-icons/go'
+import {useNavigate} from "react-router-dom";
 
 const OneVacancies = () => {
+    const navigate = useNavigate()
     return (
         <section className='one-vacancies'>
             <div className="one-vacancies container">
-                <h4 className='one-vacancies__back'>
+                <h4 className='one-vacancies__back' onClick={()=>navigate(-1)}>
                     <span className='one-vacancies__arrow'><BiArrowBack/></span>
                     К списку вакансий
 

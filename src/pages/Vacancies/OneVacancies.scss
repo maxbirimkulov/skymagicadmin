@@ -8,7 +8,11 @@
   align-items: center;
   column-gap: 20px;
   padding: 15px 0;
+
 }
+  &__back:hover{
+    cursor: pointer;
+  }
   &__arrow{
     font-size: 30px;
     margin-top: 5px;
