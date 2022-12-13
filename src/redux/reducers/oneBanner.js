@@ -1,11 +1,11 @@
 import {createAsyncThunk,createSlice} from "@reduxjs/toolkit";
 import axios from "../../utils/axios";
 
-export const getOneFilm = createAsyncThunk(
-    "onefilm/getOneFilm",
+export const getOneBanner = createAsyncThunk(
+    "oneBanner/getOneBanner",
     async (id,{rejectWithValue}) => {
         try {
-            const res = await axios(`/films/${id}`)
+            const res = await axios(`/banners/${id}`)
             if (res.statusText !== 'OK') {
                 throw new Error('Server error !')
             }
@@ -15,29 +15,29 @@ export const getOneFilm = createAsyncThunk(
         }
     }
 )
-const onefilm = createSlice({
-    name: "onefilm",
+const oneBanner = createSlice({
+    name: "oneBanner",
     initialState : {
-        product : {},
+        banner : {},
         error : '',
         status : ''
     },
     reducers : {},
     extraReducers : {
-        [getOneFilm.pending] : (state) => {
-            state.error = ''
+        [getOneBanner.pending] : (state) => {
             state.status = 'loading'
+            state.error = ''
         },
-        [getOneFilm.rejected] : (state,action) => {
+        [getOneBanner.rejected] : (state,action) => {
             state.status = 'error'
             state.error = action.payload
         },
-        [getOneFilm.fulfilled] : (state,action) => {
+        [getOneBanner.fulfilled] : (state,action) => {
             state.status = 'resolve'
             state.error = ''
-            state.product = action.payload
+            state.banner = action.payload
         }
     }
 })
 
-export default  onefilm.reducer
+export default oneBanner.reducer

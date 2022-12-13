@@ -11,6 +11,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import OneUser from "./pages/Users/OneUser";
 import Create from "./pages/Banners/Create/Create";
+import OneBanner from "./pages/Banners/OneBanner/OneBanner";
 import OneVacancies from "./pages/Vacancies/OneVacancies";
 import CreateVacancies from "./pages/Vacancies/Create/CreateVacancies";
 
@@ -33,6 +34,7 @@ function App() {
                 <Route path={'banners'} element={<Banners/>}/>
                 <Route path={'banners/create'} element={<Create/>}/>
                 <Route path={'vacancies/create'} element={<CreateVacancies/>}/>
+                <Route path={'banners/:id'} element={<OneBanner/>}/>
             </Route>
 
             <Route path='/login' element={<Login/>}/>

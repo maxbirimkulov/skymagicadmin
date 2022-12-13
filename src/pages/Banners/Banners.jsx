@@ -49,9 +49,8 @@ const Banners = () => {
                                             <h3 className="banner__location">{item.branch}</h3>
                                             <div className="banner__btn-wrapper">
                                                 <button
-                                                    className="banner__edit banners__btn banners__btn_blue">Изменить
+                                                    className="banner__edit banners__btn banners__btn_blue" onClick={() => navigate(`/banners/${item._id}`)} >Подробнее
                                                 </button>
-                                                <button className="banner__delete banners__btn">Удалить</button>
                                             </div>
                                         </div>
                                     ))
