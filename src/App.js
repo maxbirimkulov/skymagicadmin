@@ -32,7 +32,7 @@ function App() {
                 <Route path={'vacancies/:id'} element={<OneVacancies/>}/>
                 <Route path={'banners'} element={<Banners/>}/>
                 <Route path={'banners/create'} element={<Create/>}/>
-                <Route path={'banners/edit/:id'} element={<OneBanner/>}/>
+                <Route path={'banners/:id'} element={<OneBanner/>}/>
             </Route>
 
             <Route path='/login' element={<Login/>}/>

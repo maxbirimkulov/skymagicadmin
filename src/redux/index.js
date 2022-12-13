@@ -12,11 +12,13 @@ import storage from 'redux-persist/lib/storage'
 import users from './reducers/users'
 import banners from './reducers/banners'
 import user from "./reducers/user";
+import oneBanner from "./reducers/oneBanner";
 
 const rootReducer  = combineReducers({
     user,
     users,
-    banners
+    banners,
+    oneBanner
 })
 
 const persistConfig = {
