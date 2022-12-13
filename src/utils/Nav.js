@@ -5,7 +5,8 @@ const nav = [
     {text:'Билеты', path:'/tickets',role: []},
     {text:'Покупки', path:'/orders',role: []},
     {text:'Изменение баннера ', path:'/banners',role: []},
-    {text:'Вакансии', path:'/vacancies',role: []}
+    {text:'Вакансии', path:'/vacancies',role: []},
+    {text:'Галерея', path:'/gallery',role: []}
 ]
 
 export default nav
