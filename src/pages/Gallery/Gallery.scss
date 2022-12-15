@@ -1,0 +1,32 @@
+.gallery{
+  .container{
+    padding: 30px;
+  }
+  &__add{
+    margin-bottom: 20px ;
+  }
+}
+
+
+.photo{
+  &__wrapper {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 30px;
+
+
+  }
+  &__box{
+    width: 23%;
+
+  }
+  &__img{
+    width: 100%;
+  }
+  &__title{
+
+  }
+  &__location{
+    text-align: right;
+  }
+}
