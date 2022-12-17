@@ -15,7 +15,7 @@ const CreateVacancies = () => {
                         <h3>Будущие задачи</h3>
                         <label htmlFor="">
                             <input type="text" placeholder='введите задачу'/>
-                            <button>добавить еще 1</button>
+                            <button>добавить ещ е 1</button>
                         </label>
                         <h3>Требования</h3>
                         <label htmlFor="">

@@ -58,8 +58,6 @@ const Banners = () => {
                             </div>
                             <BranchMenu/>
                         </div>
-
-
                 }
             </div>
         </section>
