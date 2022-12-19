@@ -12,7 +12,6 @@ const OneVacancies = () => {
                 <h4 className='one-vacancies__back' onClick={()=>navigate(-1)}>
                     <span className='one-vacancies__arrow'><BiArrowBack/></span>
                     К списку вакансий
-
                 </h4>
                 <div className='one-vacancies__card'>
                     <h2 className='one-vacancies__title'>
@@ -33,8 +32,6 @@ const OneVacancies = () => {
                         <li className='one-vacancies__task'>
                             Обеспечение работников РО офисной мебелью, канцелярскими и хозяйственными товарами;
                         </li>
-
-
                     </ul>
                     <h3 className='one-vacancies__requirements'>Требования:</h3>
                     <ul>

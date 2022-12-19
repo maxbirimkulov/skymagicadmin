@@ -53,10 +53,18 @@ const Banners = () => {
                                             </div>
                                         </div>
                                     ))
+<<<<<<< HEAD
                         }
                     </div>
                 <BranchMenu changeBranch={changeBranch} route={'banners'}/>
                 </div>
+=======
+                                }
+                            </div>
+                            <BranchMenu/>
+                        </div>
+                }
+>>>>>>> 615f7fd445477c139a0f0c1bd68ba3deef0923a2
             </div>
         </section>
     );

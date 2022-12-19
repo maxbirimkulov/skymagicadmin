@@ -19,20 +19,24 @@ const Gallery = () => {
                             <a data-fancybox="gallery" data-caption={"hello"} href="https://lipsum.app/id/33/1024x768" >
                                 <img className="photo__img" alt="" src="https://lipsum.app/id/33/200x150" />
                             </a>
-                            <h2 className="photo__title">Имя </h2>
-                            <h3 className="photo__location">Цум</h3>
                             <button
-                                className="photo__edit banners__btn banners__btn_blue" onClick={() => navigate(`/gallery/edit/:id`)} >Подробнее
+                                className="photo__edit banners__btn banners__btn_red" > Удалить
                             </button>
                         </div>
                         <div className="photo__box">
                             <a data-fancybox="gallery" data-caption={"hello"} href="https://lipsum.app/id/33/1024x768" >
                                 <img className="photo__img" alt="" src="https://lipsum.app/id/33/200x150" />
                             </a>
-                            <h2 className="photo__title">Имя </h2>
-                            <h3 className="photo__location">Цум</h3>
                             <button
-                                className="photo__edit banners__btn banners__btn_blue" onClick={() => navigate(`/gallery/edit/:id`)} >Подробнее
+                                className="photo__edit banners__btn banners__btn_red"> Удалить
+                            </button>
+                        </div>
+                        <div className="photo__box">
+                            <a data-fancybox="gallery" data-caption={"hello"} href="https://lipsum.app/id/33/1024x768" >
+                                <img className="photo__img" alt="" src="https://lipsum.app/id/33/200x150" />
+                            </a>
+                            <button
+                                className="photo__edit banners__btn banners__btn_red"> Удалить
                             </button>
                         </div>
 
