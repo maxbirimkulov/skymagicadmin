@@ -1,0 +1,10 @@
+.home{
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__pie-wrapper{
+    width: 50%;
+  }
+}
