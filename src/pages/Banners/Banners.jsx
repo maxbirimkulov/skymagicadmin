@@ -58,9 +58,6 @@ const Banners = () => {
                     </div>
                 <BranchMenu changeBranch={changeBranch} route={'banners'}/>
                 </div>
-
-
-
             </div>
         </section>
     );

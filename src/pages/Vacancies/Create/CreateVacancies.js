@@ -67,7 +67,6 @@ const CreateVacancies = () => {
                             </p>
                         </label>
 
-
                          <label>
                              <h3>Описание</h3>
                             <textarea className='create-vacancies__textarea' {...register('description', {
@@ -85,12 +84,15 @@ const CreateVacancies = () => {
                              </p>
 
 
+
+                         </label>
+
                         <h3>Обязанности</h3>
                         <Responsibilities responsibilities={responsibilities} setResponsibilities={setResponsibilities}/>
                         <h3>Требования</h3>
                         <Requirements requirements={requirements} setRequirements={setRequirements}/>
                         <button type='submit'>Создать вакансию</button>
-                         </label>
+
                 </form>
             </div>
             <ToastContainer
