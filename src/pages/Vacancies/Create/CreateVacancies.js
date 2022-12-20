@@ -84,12 +84,7 @@ const CreateVacancies = () => {
                                  {errors.description && errors.description?.message}
                              </p>
 
-                        <h3>Будущие задачи</h3>
-                        <label htmlFor="">
-                            <input type="text" placeholder='введите задачу'/>
-                            <button>добавить ещ е 1</button>
 
-                        </label>
                         <h3>Обязанности</h3>
                         <Responsibilities responsibilities={responsibilities} setResponsibilities={setResponsibilities}/>
                         <h3>Требования</h3>
