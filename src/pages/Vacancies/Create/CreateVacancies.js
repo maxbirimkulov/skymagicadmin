@@ -66,7 +66,6 @@ const CreateVacancies = () => {
                                 {errors.title && errors.title?.message}
                             </p>
                         </label>
-<<<<<<< HEAD
 
                          <label>
                              <h3>Описание</h3>
@@ -83,12 +82,11 @@ const CreateVacancies = () => {
                              <p>
                                  {errors.description && errors.description?.message}
                              </p>
-=======
+                         </label>
                         <h3>Будущие задачи</h3>
                         <label htmlFor="">
                             <input type="text" placeholder='введите задачу'/>
                             <button>добавить ещ е 1</button>
->>>>>>> 615f7fd445477c139a0f0c1bd68ba3deef0923a2
                         </label>
                         <h3>Обязанности</h3>
                         <Responsibilities responsibilities={responsibilities} setResponsibilities={setResponsibilities}/>

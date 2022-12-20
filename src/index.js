@@ -9,6 +9,9 @@ import {PersistGate} from "redux-persist/integration/react";
 import {SkeletonTheme} from "react-loading-skeleton";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+
 root.render(
     <SkeletonTheme baseColor="#0A293D10" highlightColor="#0A293D50">
     <BrowserRouter>
