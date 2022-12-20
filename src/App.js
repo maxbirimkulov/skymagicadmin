@@ -18,7 +18,6 @@ import CreatePhoto from "./pages/Gallery/CreatePhoto/CreatePhoto";
 import OnePhoto from "./pages/Gallery/OnePhoto/OnePhoto";
 import CreateVacancies from "./pages/Vacancies/Create/CreateVacancies";
 import Video from "./pages/Video/Video";
-import OneVideo from "./pages/Video/OneVideo/OneVideo";
 import CreateVideo from "./pages/Video/CreateVideo/CreateVideo";
 
 
@@ -46,7 +45,6 @@ function App() {
                 <Route path={'gallery/create'} element={<CreatePhoto/>}/>
                 <Route path={'gallery/edit/:id'} element={<OnePhoto/>}/>
                 <Route path={'video'} element={<Video/>}/>
-                <Route path={'video/edit:id'} element={<OneVideo/>}/>
                 <Route path={'video/create'} element={<CreateVideo/>}/>
 
 

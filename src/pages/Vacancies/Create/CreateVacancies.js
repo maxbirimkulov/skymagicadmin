@@ -83,6 +83,8 @@ const CreateVacancies = () => {
                                  {errors.description && errors.description?.message}
                              </p>
 
+
+
                          </label>
 
                         <h3>Обязанности</h3>
