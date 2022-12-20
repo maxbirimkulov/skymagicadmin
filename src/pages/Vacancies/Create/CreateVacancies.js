@@ -82,17 +82,15 @@ const CreateVacancies = () => {
                              <p>
                                  {errors.description && errors.description?.message}
                              </p>
+
                          </label>
-                        <h3>Будущие задачи</h3>
-                        <label htmlFor="">
-                            <input type="text" placeholder='введите задачу'/>
-                            <button>добавить ещ е 1</button>
-                        </label>
+
                         <h3>Обязанности</h3>
                         <Responsibilities responsibilities={responsibilities} setResponsibilities={setResponsibilities}/>
                         <h3>Требования</h3>
                         <Requirements requirements={requirements} setRequirements={setRequirements}/>
                         <button type='submit'>Создать вакансию</button>
+
                 </form>
             </div>
             <ToastContainer

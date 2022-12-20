@@ -53,11 +53,11 @@ const Banners = () => {
                                             </div>
                                         </div>
                                     ))
+
                         }
                     </div>
                 <BranchMenu changeBranch={changeBranch} route={'banners'}/>
                 </div>
-
             </div>
         </section>
     );
