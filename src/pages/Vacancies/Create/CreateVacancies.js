@@ -89,8 +89,9 @@ const CreateVacancies = () => {
                         <Responsibilities responsibilities={responsibilities} setResponsibilities={setResponsibilities}/>
                         <h3>Требования</h3>
                         <Requirements requirements={requirements} setRequirements={setRequirements}/>
-                        <button type='submit'>Создать вакансию</button>
 
+
+                        <button type='submit'>Создать вакансию</button>
                 </form>
             </div>
             <ToastContainer

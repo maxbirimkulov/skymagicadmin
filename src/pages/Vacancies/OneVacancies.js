@@ -1,8 +1,8 @@
 import React from 'react';
-import './OneVacancies.scss'
 import {BiArrowBack} from 'react-icons/bi'
 import {GoLocation} from 'react-icons/go'
 import {useNavigate} from "react-router-dom";
+import './OneVacancies.scss'
 
 const OneVacancies = () => {
     const navigate = useNavigate()
