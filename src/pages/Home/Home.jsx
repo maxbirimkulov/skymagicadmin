@@ -1,25 +1,25 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './home.scss'
-import { Pie } from  'react-chartjs-2'
-import {Chart as ChartJS} from "chart.js/auto";
+import Pies from "./Pie/Pie";
+import Gistrogram from "./GIstoram/Gistrogram";
 
 
-const data ={
-    labels:['Взрослый билет', 'Детский билет'],
-    datasets:[{
 
-        data:[100,50]
-    }]
-}
+
 
 
 const Home = () => {
-
     return (
         <section className="home">
            <div className="container">
-               <div className="home__pie-wrapper">
-                   <Pie  data={data}/>
+
+               <div className="home__diagram">
+                <div className="home__pie-wrapper">
+                 <Pies/>
+                </div>
+                    <div className="gistoram">
+                      <Gistrogram/>
+                    </div>
                </div>
            </div>
         </section>

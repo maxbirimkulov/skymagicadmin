@@ -1,10 +1,24 @@
 .home{
-  .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  background: #80808010;
+.home__diagram{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
   &__pie-wrapper{
-    width: 50%;
+width: 30%;
+    height: 50vh;
+    border-radius: 15px;
+    background: white;
+    padding: 15px;
+  }
+
+  .gistogram{
+    width: 50vw;
+    height: 50vh;
+background: white;
+    padding: 15px;
+    border-radius: 10px;
   }
 }
