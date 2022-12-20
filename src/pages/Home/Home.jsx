@@ -15,7 +15,16 @@ const data ={
 
 const Home = () => {
 
-    return <Pie  data={data}/>
+    return (
+        <section className="home">
+           <div className="container">
+               <div className="home__pie-wrapper">
+                   <Pie  data={data}/>
+               </div>
+           </div>
+        </section>
+
+    )
 };
 
 export default Home;
