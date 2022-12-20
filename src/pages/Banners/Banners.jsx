@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import "./Banners.scss"
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {getBanners} from "../../redux/reducers/banners";
+import banners, {changeBranch, getBanners} from "../../redux/reducers/banners";
 import BranchMenu from "../../components/BranchMenu/BranchMenu";
 
 
@@ -14,8 +14,9 @@ const Banners = () => {
     const {data, error, status, filter} = useSelector((s) => s.banners )
 
     useEffect(() => {
-        dispatch(getBanners())
-    }, [filter.branch])
+        dispatch(getBanners(filter))
+
+    }, [filter])
 
 
     return (
@@ -33,12 +34,10 @@ const Banners = () => {
                     <p>На экране выведен старый список пользователей</p>
                 </div> : ''}
 
-                {
-                    status === 'loading' ? '' :
-                        <div className='banners__content'>
-                            <div className="banners__wrapper">
-                                {
-                                    data.map((item) => (
+                <div className='banners__content'>
+                    <div className="banners__wrapper">
+                        {
+                             status === 'loading' ? '' :data.map((item) => (
                                         <div className="banner">
                                             <div className="banner__img">
                                                 <img src={`http://localhost:4444${item.images}`} alt={item.title}/>
@@ -54,11 +53,18 @@ const Banners = () => {
                                             </div>
                                         </div>
                                     ))
+<<<<<<< HEAD
+                        }
+                    </div>
+                <BranchMenu changeBranch={changeBranch} route={'banners'}/>
+                </div>
+=======
                                 }
                             </div>
                             <BranchMenu/>
                         </div>
                 }
+>>>>>>> 615f7fd445477c139a0f0c1bd68ba3deef0923a2
             </div>
         </section>
     );

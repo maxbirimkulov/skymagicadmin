@@ -1,4 +1,10 @@
 .create-vacancies{
+  &__textarea{
+    width: 400px;
+    margin: 25px 0;
+    padding: 15px 20px;
+    resize: none;
+  }
 &__back{
   padding: 10px 36px;
   margin: 15px 0;

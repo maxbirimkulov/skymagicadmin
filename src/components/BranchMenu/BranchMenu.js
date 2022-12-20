@@ -1,18 +1,15 @@
 import React from 'react';
 import './branch.scss'
 import {useDispatch, useSelector} from "react-redux";
-import {changeBranch} from "../../redux/reducers/banners";
 import {branchMenuData} from "../../utils/BranchMenuData";
 
 
 
 
-const BranchMenu = () => {
+const BranchMenu = ({changeBranch, route}) => {
 
-    const {filter} = useSelector((store) => store.banners )
+    const {filter} = useSelector((store) => store[route] )
     const dispatch = useDispatch()
-
-
 
 
 
