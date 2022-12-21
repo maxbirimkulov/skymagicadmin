@@ -42,42 +42,44 @@ const Create = () => {
           <div className="container">
               <button type='button' className="banners__btn banners__btn_blue" onClick={() => navigate(-1)}>назад</button>
               <form className="create__form" onSubmit={handleSubmit(onSubmit)}>
-                  <h2>Создание баннера</h2>
-                  <label>
-                      <input  {...register('title', {
-                          required: {
-                              message: 'Заголовок баннера обязательно к заполнению',
-                              value: true
-                          },
-                          minLength: {
-                              value: 5,
-                              message: "Минимум 5 символов"
-                          }
-                      })} className="create__title" type="text" placeholder="Введите название"/>
-                      <p className='register__form-error'>
-                          {errors.title && errors.title?.message}
-                      </p>
-                  </label>
-                  <label>
-                      Выберите филиал :
-                      <select {...register('branch', {
-                          required: {
-                              message: 'Выберите филиал',
-                              value: true
-                          }
-                      })}  className="location" >
-                          <option value="" className="location__item">Филиалы</option>
-                          <option  value="tsum" className="location__item">SMAGIC ЦУМ</option>
-                          <option value="tommy" className="location__item">SMAGIC ТОММИ МОЛ</option>
-                          <option value="techno" className="location__item">SMAGIC ТЕНХОПАРК</option>
-                          <option value="sky" className="location__item">SKY-PARK АЛА АРЧА</option>
+                  <div className="create__form-wrapper">
 
-                      </select>
-                      <p className='register__form-error'>
-                          {errors.branch && errors.branch?.message}
-                      </p>
-                  </label>
-                  <label>
+                      <h2>Создание баннера</h2>
+                      <label>
+                          <input  {...register('title', {
+                              required: {
+                                  message: 'Заголовок баннера обязательно к заполнению',
+                                  value: true
+                              },
+                              minLength: {
+                                  value: 5,
+                                  message: "Минимум 5 символов"
+                              }
+                          })} className="create__title" type="text" placeholder="Введите название"/>
+                          <p className='register__form-error'>
+                              {errors.title && errors.title?.message}
+                          </p>
+                      </label>
+                      <label>
+                          Выберите филиал :
+                          <select {...register('branch', {
+                              required: {
+                                  message: 'Выберите филиал',
+                                  value: true
+                              }
+                          })}  className="location" >
+                              <option value="" className="location__item">Филиалы</option>
+                              <option  value="tsum" className="location__item">SMAGIC ЦУМ</option>
+                              <option value="tommy" className="location__item">SMAGIC ТОММИ МОЛ</option>
+                              <option value="techno" className="location__item">SMAGIC ТЕНХОПАРК</option>
+                              <option value="sky" className="location__item">SKY-PARK АЛА АРЧА</option>
+
+                          </select>
+                          <p className='register__form-error'>
+                              {errors.branch && errors.branch?.message}
+                          </p>
+                      </label>
+                      <label>
                       <textarea {...register('text', {
                           required: {
                               message: 'Описание баннера обязательно к заполнению',
@@ -88,12 +90,14 @@ const Create = () => {
                               message: "Минимум 10 символов"
                           }
                       })}  cols="30" rows="10" placeholder="Введите Описание"></textarea>
-                      <p className='register__form-error'>
-                          {errors.text && errors.text?.message}
-                      </p>
-                  </label>
-                  <DownloadBtn images={images} setImages={setImages}/>
-                  <button type='submit'>Создать</button>
+                          <p className='register__form-error'>
+                              {errors.text && errors.text?.message}
+                          </p>
+                      </label>
+                      <DownloadBtn images={images} setImages={setImages}/>
+                      <button type='submit' className="banners__btn banners__btn_green">Создать</button>
+
+                  </div>
               </form>
           </div>
         </div>

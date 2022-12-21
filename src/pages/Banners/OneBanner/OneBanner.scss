@@ -1,31 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
 .one-banner{
+  font-family: "Fira Sans", sans-serif;
+  background: #428bca;
+  button{
+    margin-top: 30px;
+    margin-left: 45px;
+  }
   .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 30px;
+    column-gap: 50px;
   }
   &__left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
   }
   &__img-wrapper{
     margin-top: 30px;
-    background: red;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+
+    overflow: hidden;
+    padding: 15px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     img{
        width: 100%;
-      background: blue;
+      height: auto;
+      border-radius: 10px;
     }
   }
   &__h{
-    align-self: flex-start;
+
   }
   &__right{
+    padding: 20px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    row-gap: 40px;
+    row-gap: 33px;
   }
 }
