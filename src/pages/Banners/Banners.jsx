@@ -51,7 +51,7 @@ const Banners = () => {
                                             </h3>
                                             <div className="banner__btn-wrapper">
                                                 <button
-                                                    className="banner__edit banners__btn banners__btn_blue" onClick={() => navigate(`/banners/${item._id}`)} >Подробнее
+                                                    className="banner__edit banners__btn banners__btn_blue" onClick={() => navigate(`/banners/edit/${item._id}`)} >Подробнее
                                                 </button>
                                             </div>
                                         </div>
