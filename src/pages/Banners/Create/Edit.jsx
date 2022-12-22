@@ -109,7 +109,7 @@ const Create = () => {
                         </p>
                     </label>
                     <DownloadBtn  status={'image'} images={images} setImages={setImages}/>
-                    <button type='submit'>Изменить</button>
+                    <button type='submit' className="banners__btn banners__btn_green">Изменить</button>
                     </div>
                 </form>
             </div>

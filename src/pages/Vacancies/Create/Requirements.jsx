@@ -29,12 +29,12 @@ const Requirements = ({requirements, setRequirements}) => {
         <div>
         <label htmlFor="">
             <input value={text} onChange={(e) => setText(e.target.value) } type="text" placeholder='введите требования'/>
-            <button type='button' onClick={addRequirements}>добавить</button>
+            <button type='button' className="banners__btn banners__btn_green" onClick={addRequirements}>добавить</button>
         </label>
             <ul>
                 {
                     requirements.map((item, idx) => (
-                        <li style={{display: "flex", justifyContent: "space-between"}} key={idx + item}>{item.text} <button type='button' onClick={() => deleteRequirements(item.id)}>Удалить</button></li>
+                        <li style={{display: "flex", justifyContent: "space-between"}} key={idx + item}>{item.text} <button type='button' className="banners__btn banners__btn_red" onClick={() => deleteRequirements(item.id)}>Удалить</button></li>
                     ))
                 }
             </ul>

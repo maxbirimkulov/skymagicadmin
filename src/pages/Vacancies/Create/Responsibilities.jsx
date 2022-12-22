@@ -30,12 +30,12 @@ const Responsibilities = ({responsibilities, setResponsibilities}) => {
         <div>
         <label htmlFor="">
             <input value={text} onChange={(e) => setText(e.target.value) } type="text" placeholder='введите обязанности'/>
-            <button type='button' onClick={addResponsibilities}>добавить</button>
+            <button type='button' className="banners__btn banners__btn_green" onClick={addResponsibilities}>добавить</button>
         </label>
             <ul>
                 {
                     responsibilities.map((item, idx) => (
-                        <li style={{display: "flex", justifyContent: "space-between"}} key={idx + item}>{item.text} <button type='button' onClick={() => deleteResponsibilities(item.id)}>Удалить</button></li>
+                        <li style={{display: "flex", justifyContent: "space-between"}} key={idx + item}>{item.text} <button type='button' className="banners__btn banners__btn_red" onClick={() => deleteResponsibilities(item.id)}>Удалить</button></li>
                     ))
                 }
             </ul>

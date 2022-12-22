@@ -112,7 +112,7 @@ const CreateVacancies = () => {
                         </p>
                     </label>
 
-                        <button type='submit'>Создать вакансию</button>
+                        <button type='submit' className="banners__btn banners__btn_green">Создать вакансию</button>
                 </form>
             </div>
             <ToastContainer
