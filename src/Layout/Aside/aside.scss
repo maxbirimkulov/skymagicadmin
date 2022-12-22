@@ -1,10 +1,10 @@
 .aside{
   max-width: 270px;
   width: 20%;
-  background: #0A293D90;
+  background: #e0dede;
   min-width: 250px;
   height: 100vh;
-  position: relative;
+  position: fixed;
   transition: .5s;
 
   &__top{
