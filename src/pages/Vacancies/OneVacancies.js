@@ -1,11 +1,40 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {BiArrowBack} from 'react-icons/bi'
 import {GoLocation} from 'react-icons/go'
-import {useNavigate} from "react-router-dom";
+import {Navigate, useNavigate, useParams} from "react-router-dom";
 import './OneVacancies.scss'
+import {useDispatch, useSelector} from "react-redux";
+
+
+import axios from "../../utils/axios";
+import {getOneVacancies} from "../../redux/reducers/oneVacancies";
 
 const OneVacancies = () => {
+
     const navigate = useNavigate()
+
+    const dispatch = useDispatch()
+
+    const params = useParams()
+
+    const {oneVacancies, status ,error} = useSelector((store) => store.oneVacancies )
+
+    useEffect(() => {
+        dispatch(getOneVacancies(params.id))
+    }, [])
+
+
+    if (status === 'error') {
+        return <Navigate to='/vacancies'/>
+    }
+
+    const deleteVacancies = () => {
+        axios.delete(`vacancies/${oneVacancies._id}`)
+            .then(() => navigate('/vacancies'))
+            .catch(() => alert('не удалось удалить'))
+    }
+
+    console.log(oneVacancies)
     return (
         <section className='one-vacancies'>
             <div className="one-vacancies container">
@@ -15,34 +44,27 @@ const OneVacancies = () => {
                 </h4>
                 <div className='one-vacancies__card'>
                     <h2 className='one-vacancies__title'>
-                        Специалист по аренде и административно-хозяйственным вопросам
-                        <span className='one-vacancies__icon'><GoLocation className='one-vacancies__logo'/> SKY-PARK</span>
+                        {oneVacancies.title}
+                        <span className='one-vacancies__icon'><GoLocation className='one-vacancies__logo'/> {oneVacancies.branch}</span>
                     </h2>
                     <h3 className='one-vacancies__task-text'>Будущие задачи:</h3>
                     <ul className='one-vacancies__tasks'>
-                        <li className='one-vacancies__task'>
-                            Обеспечение работников РО офисной мебелью, канцелярскими и хозяйственными товарами;
-                        </li>
-                        <li className='one-vacancies__task'>
-                            Обеспечение работников РО офисной мебелью, канцелярскими и хозяйственными товарами;
-                        </li>
-                        <li className='one-vacancies__task'>
-                            Обеспечение работников РО офисной мебелью, канцелярскими и хозяйственными товарами;
-                        </li>
-                        <li className='one-vacancies__task'>
-                            Обеспечение работников РО офисной мебелью, канцелярскими и хозяйственными товарами;
-                        </li>
+                        {oneVacancies.responsibilities.map((item) => (
+                            <li className='one-vacancies__task'>
+                                {item}
+                            </li>
+                        ))}
                     </ul>
                     <h3 className='one-vacancies__requirements'>Требования:</h3>
                     <ul>
-                        <li className='one-vacancies__requirement'>Высшее техническое образование;</li>
-                        <li className='one-vacancies__requirement'>Опыт взаимодействия с арендодателями;</li>
-                        <li className='one-vacancies__requirement'>Опыт работы по административно-хозяйственному направлению;</li>
-                        <li className='one-vacancies__requirement'>Легкая обучаемость, развитое чувство ответственности;</li>
-
+                        {
+                            oneVacancies.requirement.map((item) => (
+                                <li className='one-vacancies__requirement'>{item}</li>
+                            ))
+                        }
                     </ul>
                     <div className='one-vacancies__btns'>
-                        <button className='one-vacancies__delete'>Удалить</button>
+                        <button className='one-vacancies__delete' onClick={deleteVacancies}>Удалить</button>
                         <button className='one-vacancies__change'>Изменить</button>
                     </div>
                 </div>

@@ -3,10 +3,10 @@ import './Create.scss'
 import {useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import axios from "../../../utils/axios";
-import Responsibilities from "../../Banners/Create/Responsibilities";
+import Responsibilities from "./Responsibilities";
 import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import Requirements from "../../Banners/Create/Requirements";
+import Requirements from "./Requirements";
 
 
 
@@ -36,7 +36,7 @@ const CreateVacancies = () => {
     const onSubmit = (data) => {
         createVacancies({
             ...data,
-            requirements,
+            requirement: requirements,
             responsibilities
         })
     }
@@ -92,6 +92,25 @@ const CreateVacancies = () => {
                         <h3>Требования</h3>
                         <Requirements requirements={requirements} setRequirements={setRequirements}/>
 
+                    <label>
+                        Выберите филиал :
+                        <select {...register('branch', {
+                            required: {
+                                message: 'Выберите филиал',
+                                value: true
+                            }
+                        })}  className="location" >
+                            <option value="" className="location__item">Филиалы</option>
+                            <option  value="tsum" className="location__item">SMAGIC ЦУМ</option>
+                            <option value="tommy" className="location__item">SMAGIC ТОММИ МОЛ</option>
+                            <option value="techno" className="location__item">SMAGIC ТЕНХОПАРК</option>
+                            <option value="sky" className="location__item">SKY-PARK АЛА АРЧА</option>
+
+                        </select>
+                        <p className='register__form-error'>
+                            {errors.branch && errors.branch?.message}
+                        </p>
+                    </label>
 
                         <button type='submit'>Создать вакансию</button>
                 </form>

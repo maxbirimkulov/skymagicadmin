@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import banners, {changeBranch, getBanners} from "../../redux/reducers/banners";
 import BranchMenu from "../../components/BranchMenu/BranchMenu";
+import SelectBranch from "../../components/SelectBranch/SelectBranch";
 
 
 const Banners = () => {
@@ -45,7 +46,9 @@ const Banners = () => {
 
                                             <h2 className="banner__title">{item.title}</h2>
                                             <p className="banner__description">{item.text}</p>
-                                            <h3 className="banner__location">{item.branch}</h3>
+                                            <h3 className="banner__location">
+                                                <SelectBranch branch={item.branch}/>
+                                            </h3>
                                             <div className="banner__btn-wrapper">
                                                 <button
                                                     className="banner__edit banners__btn banners__btn_blue" onClick={() => navigate(`/banners/${item._id}`)} >Подробнее

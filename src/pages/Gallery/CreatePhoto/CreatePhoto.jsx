@@ -47,7 +47,7 @@ const CreatePhoto = () => {
                         <label>
                             <input {...register('text')}  className="create-photo__title" type="text" placeholder="Введите название"/>
                         </label>
-                        <DownloadBtn images={images} setImages={setImages}/>
+                        <DownloadBtn  status={'image'} images={images} setImages={setImages}/>
                         <button className="banners__btn banners__btn_green" type=' submit'>Создать</button>
                     </form>
                 </div>

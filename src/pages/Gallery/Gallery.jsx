@@ -4,6 +4,8 @@ import {useNavigate} from "react-router-dom";
 import Fancybox from "./Fancybox/Fancybox";
 import {useDispatch, useSelector} from "react-redux";
 import {getGallery} from "../../redux/reducers/gallery";
+import axios from "../../utils/axios";
+import {toast, ToastContainer} from "react-toastify";
 
 
 const Gallery = () => {
@@ -17,6 +19,15 @@ const Gallery = () => {
         dispatch(getGallery())
 
     }, [])
+
+    const deleteGallery = (id) => {
+        axios.delete(`gallery/${id}`)
+            .then(() =>  {
+                toast("Картинка успешно удалена")
+                dispatch(getGallery())
+            })
+            .catch(() => toast('Не удалось удалить картинку'))
+    }
 
 
     return (
@@ -41,7 +52,7 @@ const Gallery = () => {
                                             <img className="photo__img" alt="" src={`http://localhost:4444${item.imageUrl}`}/>
                                         </a>
                                         <button
-                                            className="photo__edit banners__btn banners__btn_red"> Удалить
+                                            className="photo__edit banners__btn banners__btn_red" onClick={() => deleteGallery(item._id)}> Удалить
                                         </button>
                                     </div>
                                 ))
@@ -52,6 +63,17 @@ const Gallery = () => {
                 }
             </div>
 
+            <ToastContainer
+                position="bottom-left"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
 
         </section>
     );

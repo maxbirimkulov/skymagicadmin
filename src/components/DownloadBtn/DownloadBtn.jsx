@@ -2,7 +2,7 @@ import React, {useRef, useState} from 'react';
 import axios from "../../utils/axios";
 import {Button} from "@mui/material";
 
-const ClothesAddBtn = ({num,images,setImages}) => {
+const ClothesAddBtn = ({num,images,setImages,status}) => {
     const image = useRef()
 
     const handleChangeImage1 = async (e) => {
@@ -29,7 +29,8 @@ const ClothesAddBtn = ({num,images,setImages}) => {
             {
                 images && (
                     <>
-                        <img style={{width:'100px', margin: '0 20px'}} src={`http://localhost:4444${images}`} alt="Uploaded"/>
+                        {status === 'video' ? <video style={{width:'500px', margin: '0 20px', height: '300px'}} src={`http://localhost:4444${images}`} controls></video> :     <img style={{width:'100px', margin: '0 20px'}} src={`http://localhost:4444${images}`} alt="Uploaded"/>}
+
                         <Button style={{width:'200px'}} onClick={() => setImages('')} type='button' variant="contained">Удалить картинку</Button>
                     </>
                 )

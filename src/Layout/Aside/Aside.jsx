@@ -24,7 +24,7 @@ const Aside = () => {
                 <div className='aside__menu'>
                     {
                         nav.map((item) => (
-                            <NavLink className='aside__link' to={item.path}>{item.text}<MdOutlineArrowForwardIos/></NavLink>
+                            <NavLink key={item.text} className='aside__link' to={item.path}>{item.text}<MdOutlineArrowForwardIos/></NavLink>
                         ))
                     }
                 </div>

@@ -92,7 +92,7 @@ const Create = () => {
                           {errors.text && errors.text?.message}
                       </p>
                   </label>
-                  <DownloadBtn images={images} setImages={setImages}/>
+                  <DownloadBtn  status={'image'} images={images} setImages={setImages}/>
                   <button type='submit'>Создать</button>
               </form>
           </div>

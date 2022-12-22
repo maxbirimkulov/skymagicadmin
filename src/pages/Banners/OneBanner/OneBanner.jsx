@@ -50,7 +50,7 @@ const OneBanner = () => {
                     <h3 className="one-banner__location">{banner.branch}</h3>
                     <div className="banner__btn-wrapper">
                         <button
-                            className="banner__edit banners__btn banners__btn_blue">Изменить
+                            className="banner__edit banners__btn banners__btn_blue" onClick={() => navigate(`/banners/edit/${banner._id}`)}>Изменить
                         </button>
                         <button className="banner__delete banners__btn banners__btn_red" type='button' onClick={deleteBanner}>Удалить</button>
                     </div>

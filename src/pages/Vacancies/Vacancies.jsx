@@ -6,6 +6,7 @@ import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import vacancies, {changeBranch, getVacancies} from "../../redux/reducers/vacancies";
 import {ToastContainer} from "react-toastify";
+import SelectBranch from "../../components/SelectBranch/SelectBranch";
 
 
 const Vacancies = () => {
@@ -29,7 +30,7 @@ const Vacancies = () => {
 
                       {
                           data && data.map((item) =>  (
-                              <div className="vacancies__card">
+                              <div className="vacancies__card" onClick={() => navigate(`/vacancies/${item._id}`)}>
                                   <div className="vacancies__text">
                                       <h3 className='vacancies__name'>
                                           {item.title}
@@ -39,13 +40,8 @@ const Vacancies = () => {
                                       </p>
                                   </div>
                                   <p className='vacancies__location'>
-                                      <span className='vacancies__logo'><GoLocation/></span>
-                                      {
-                                          item.branch  === 'tsum' ? 'SMAGIC ЦУМ'
-                                          : item.branch  === 'tommy' ? 'SMAGIC ТОММИ МОЛ'
-                                          : item.branch  === 'techno' ? 'SMAGIC ЦУМ'
-                                          : item.branch  === 'sky' ? 'SKY-PARK АЛА АРЧА' : ''
-                                      }
+
+                                        <SelectBranch branch={item.branch}/>
                                   </p>
                               </div>
                           ))
