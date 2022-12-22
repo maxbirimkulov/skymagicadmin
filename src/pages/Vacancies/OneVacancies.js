@@ -49,7 +49,7 @@ const OneVacancies = () => {
                     </h2>
                     <h3 className='one-vacancies__task-text'>Будущие задачи:</h3>
                     <ul className='one-vacancies__tasks'>
-                        {oneVacancies.responsibilities.map((item) => (
+                        {oneVacancies.responsibilities && oneVacancies.responsibilities.map((item) => (
                             <li key={item.id} className='one-vacancies__task'>
                                 {item.text}
                             </li>
@@ -58,7 +58,7 @@ const OneVacancies = () => {
                     <h3 className='one-vacancies__requirements'>Требования:</h3>
                     <ul>
                         {
-                            oneVacancies.requirement.map((item) => (
+                            oneVacancies.requirement && oneVacancies.requirement.map((item) => (
                                 <li key={item.id} className='one-vacancies__requirement'>{item.text}</li>
                             ))
                         }
