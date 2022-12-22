@@ -10,7 +10,6 @@ const Layout = () => {
 
     const {user} = useSelector((store) => store.user)
 
-    console.log(user)
     if (!user.login) {
         return <Navigate to='/login'/>
     }

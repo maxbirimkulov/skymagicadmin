@@ -50,8 +50,8 @@ const OneVacancies = () => {
                     <h3 className='one-vacancies__task-text'>Будущие задачи:</h3>
                     <ul className='one-vacancies__tasks'>
                         {oneVacancies.responsibilities.map((item) => (
-                            <li className='one-vacancies__task'>
-                                {item}
+                            <li key={item.id} className='one-vacancies__task'>
+                                {item.text}
                             </li>
                         ))}
                     </ul>
@@ -59,13 +59,13 @@ const OneVacancies = () => {
                     <ul>
                         {
                             oneVacancies.requirement.map((item) => (
-                                <li className='one-vacancies__requirement'>{item}</li>
+                                <li key={item.id} className='one-vacancies__requirement'>{item.text}</li>
                             ))
                         }
                     </ul>
                     <div className='one-vacancies__btns'>
                         <button className='one-vacancies__delete' onClick={deleteVacancies}>Удалить</button>
-                        <button className='one-vacancies__change'>Изменить</button>
+                        <button className='one-vacancies__change' onClick={() => navigate(`/vacancies/edit/${oneVacancies._id}`)}>Изменить</button>
                     </div>
                 </div>
             </div>

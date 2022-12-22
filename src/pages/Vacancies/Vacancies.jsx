@@ -16,7 +16,6 @@ const Vacancies = () => {
 
     useEffect(() => {
         dispatch(getVacancies(filter))
-        console.log(123)
     }, [filter])
 
     return (
@@ -30,7 +29,7 @@ const Vacancies = () => {
 
                       {
                           data && data.map((item) =>  (
-                              <div className="vacancies__card" onClick={() => navigate(`/vacancies/${item._id}`)}>
+                              <div key={item._id} className="vacancies__card" onClick={() => navigate(`/vacancies/${item._id}`)}>
                                   <div className="vacancies__text">
                                       <h3 className='vacancies__name'>
                                           {item.title}

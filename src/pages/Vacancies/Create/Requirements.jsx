@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {toast, ToastContainer} from "react-toastify";
+import { v4 as uuidv4 } from 'uuid';
 
 
 const Requirements = ({requirements, setRequirements}) => {
@@ -12,9 +13,16 @@ const Requirements = ({requirements, setRequirements}) => {
         if (!text.length) {
             toast("Заполните поле ввода")
         } else {
-            setRequirements((prev) => [...prev, text])
+            setRequirements((prev) => [...prev, {
+                text,
+                id: uuidv4()
+            }])
             setText('')
         }
+    }
+
+    const deleteRequirements = (id) => {
+        setRequirements(requirements.filter((item) => item.id !== id ))
     }
 
     return (
@@ -26,7 +34,7 @@ const Requirements = ({requirements, setRequirements}) => {
             <ul>
                 {
                     requirements.map((item, idx) => (
-                        <li key={idx + item}>{item}</li>
+                        <li style={{display: "flex", justifyContent: "space-between"}} key={idx + item}>{item.text} <button type='button' onClick={() => deleteRequirements(item.id)}>Удалить</button></li>
                     ))
                 }
             </ul>

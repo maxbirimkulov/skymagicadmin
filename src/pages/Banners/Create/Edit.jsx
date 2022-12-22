@@ -57,6 +57,7 @@ const Create = () => {
             <div className="container">
                 <button type='button' className="banners__btn banners__btn_blue" onClick={() => navigate(-1)}>назад</button>
                 <form className="create__form" onSubmit={handleSubmit(onSubmit)}>
+                    <div className="create__form-wrapper">
                     <h2>Изменение баннера</h2>
                     <label>
                         <input defaultValue={banner.title}  {...register('title', {
@@ -109,6 +110,7 @@ const Create = () => {
                     </label>
                     <DownloadBtn  status={'image'} images={images} setImages={setImages}/>
                     <button type='submit'>Изменить</button>
+                    </div>
                 </form>
             </div>
         </div>

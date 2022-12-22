@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {toast, ToastContainer} from "react-toastify";
-
+import { v4 as uuidv4 } from 'uuid';
 
 const Responsibilities = ({responsibilities, setResponsibilities}) => {
 
@@ -13,10 +13,18 @@ const Responsibilities = ({responsibilities, setResponsibilities}) => {
             console.log(123)
             toast("Заполните поле ввода")
         } else {
-            setResponsibilities((prev) => [...prev, text])
+            setResponsibilities((prev) => [...prev, {
+                text,
+                id: uuidv4()
+            }])
             setText('')
         }
     }
+
+    const deleteResponsibilities = (id) => {
+        setResponsibilities(responsibilities.filter((item) => item.id !== id ))
+    }
+
 
     return (
         <div>
@@ -27,7 +35,7 @@ const Responsibilities = ({responsibilities, setResponsibilities}) => {
             <ul>
                 {
                     responsibilities.map((item, idx) => (
-                        <li key={idx + item}>{item}</li>
+                        <li style={{display: "flex", justifyContent: "space-between"}} key={idx + item}>{item.text} <button type='button' onClick={() => deleteResponsibilities(item.id)}>Удалить</button></li>
                     ))
                 }
             </ul>

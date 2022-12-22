@@ -20,6 +20,7 @@ import CreateVacancies from "./pages/Vacancies/Create/CreateVacancies";
 import Video from "./pages/Video/Video";
 import CreateVideo from "./pages/Video/CreateVideo/CreateVideo";
 import Edit from "./pages/Banners/Create/Edit";
+import EditVacancies from "./pages/Vacancies/Create/EditVacancies";
 
 
 
@@ -39,6 +40,7 @@ function App() {
                 <Route path={'users/:id'} element={<OneUser/>}/>
                 <Route path={'vacancies/:id'} element={<OneVacancies/>}/>
                 <Route path={'vacancies/create'} element={<CreateVacancies/>}/>
+                <Route path={'vacancies/edit/:id'} element={<EditVacancies/>}/>
                 <Route path={'banners'} element={<Banners/>}/>
                 <Route path={'banners/create'} element={<Create/>}/>
                 <Route path={'banners/:id'} element={<OneBanner/>}/>
