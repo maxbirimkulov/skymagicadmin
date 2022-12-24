@@ -21,6 +21,8 @@ import Video from "./pages/Video/Video";
 import CreateVideo from "./pages/Video/CreateVideo/CreateVideo";
 import Edit from "./pages/Banners/Create/Edit";
 import EditVacancies from "./pages/Vacancies/Create/EditVacancies";
+import Requests from "./pages/Request/Requests";
+import Reviews from "./pages/Review/Reviews";
 
 
 
@@ -50,8 +52,8 @@ function App() {
                 <Route path={'gallery/edit/:id'} element={<OnePhoto/>}/>
                 <Route path={'video'} element={<Video/>}/>
                 <Route path={'video/create'} element={<CreateVideo/>}/>
-
-
+                <Route path={'requests'} element={<Requests/>}/>
+                <Route path={'reviews'} element={<Reviews/>}/>
             </Route>
 
             <Route path='/login' element={<Login/>}/>

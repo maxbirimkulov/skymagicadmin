@@ -3,11 +3,6 @@ import './home.scss'
 import Pies from "./Pie/Pie";
 import Gistrogram from "./GIstoram/Gistrogram";
 
-
-
-
-
-
 const Home = () => {
     return (
         <section className="home">

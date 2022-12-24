@@ -17,6 +17,8 @@ import vacancies from "./reducers/vacancies";
 import oneBanner from "./reducers/oneBanner";
 import oneVacancies from "./reducers/oneVacancies";
 import video from "./reducers/video";
+import reviews from "./reducers/reviews";
+import requests from "./reducers/requests";
 
 const rootReducer  = combineReducers({
     user,
@@ -26,7 +28,9 @@ const rootReducer  = combineReducers({
     vacancies,
     gallery,
     oneVacancies,
-    video
+    video,
+    reviews,
+    requests
 })
 
 const persistConfig = {
