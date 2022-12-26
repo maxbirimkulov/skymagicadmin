@@ -6,7 +6,7 @@ export const getReviews = createAsyncThunk(
     'reviews/getReviews',
     async (filter, {rejectWithValue}) => {
         try {
-            const res = await axios(`/reviews?${filter?.branch ? 'branch=' + filter.branch + '&' : ''}`)
+            const res = await axios(`/review?${filter?.branch ? 'branch=' + filter.branch + '&' : ''}`)
             if (res.statusText !== 'OK') {
                 throw new Error('Server error !')
             }

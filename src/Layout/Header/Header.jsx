@@ -32,6 +32,18 @@ const Header = () => {
             case '/vacancies' : {
                 return 'Вакансии'
             }
+            case '/gallery' : {
+                return 'Галерея'
+            }
+            case '/video' : {
+                return 'Видео'
+            }
+            case '/reviews' : {
+                return 'Отзывы'
+            }
+            case '/requests' : {
+                return 'Заявки'
+            }
         }
     }
 
