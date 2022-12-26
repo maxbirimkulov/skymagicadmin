@@ -23,6 +23,7 @@ import Edit from "./pages/Banners/Create/Edit";
 import EditVacancies from "./pages/Vacancies/Create/EditVacancies";
 import Requests from "./pages/Request/Requests";
 import Reviews from "./pages/Review/Reviews";
+import Click from "./pages/Click/Click";
 
 
 
@@ -54,6 +55,7 @@ function App() {
                 <Route path={'video/create'} element={<CreateVideo/>}/>
                 <Route path={'requests'} element={<Requests/>}/>
                 <Route path={'reviews'} element={<Reviews/>}/>
+                <Route path={'click'} element={<Click/>}/>
             </Route>
 
             <Route path='/login' element={<Login/>}/>

@@ -19,6 +19,7 @@ import oneVacancies from "./reducers/oneVacancies";
 import video from "./reducers/video";
 import reviews from "./reducers/reviews";
 import requests from "./reducers/requests";
+import click from "./reducers/click";
 
 const rootReducer  = combineReducers({
     user,
@@ -30,7 +31,8 @@ const rootReducer  = combineReducers({
     oneVacancies,
     video,
     reviews,
-    requests
+    requests,
+    click
 })
 
 const persistConfig = {

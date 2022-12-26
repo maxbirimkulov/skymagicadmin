@@ -9,7 +9,8 @@ const nav = [
     {text:'Галерея', path:'/gallery',role:  []},
     {text:'Видео',path:'/video',role:[]},
     {text:'Отзывы',path:'/reviews',role:[]},
-    {text:'Заявки',path:'/requests',role:[]}
+    {text:'Заявки',path:'/requests',role:[]},
+    {text:'Клики',path:'/click',role:[]},
 ]
 
 export default nav
