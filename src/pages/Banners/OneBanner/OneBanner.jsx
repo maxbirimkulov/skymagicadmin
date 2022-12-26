@@ -39,7 +39,7 @@ const OneBanner = () => {
                     <button type='button' className="banners__btn banners__btn_blue" onClick={() => navigate(-1)}>назад</button>
                     <h2 className="one-banner__h">Фото баннера:</h2>
                     <div className="one-banner__img-wrapper">
-                        <img className="one-banner__img" src={`http://localhost:4444${banner.images}`} alt={banner.title}/>
+                        <img className="one-banner__img" src={`http://62.113.96.238:4444${banner.images}`} alt={banner.title}/>
                     </div>
                 </div>
                 <div className="one-banner__right">
