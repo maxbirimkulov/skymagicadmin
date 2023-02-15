@@ -48,8 +48,8 @@ const Gallery = () => {
                                 data.map(item => (
                                     <div className="photo__box">
                                         <a data-fancybox="gallery" data-caption={item.text}
-                                           href={`http://62.113.96.238:4444${item.imageUrl}`}>
-                                            <img className="photo__img" alt="" src={`http://62.113.96.238:4444${item.imageUrl}`}/>
+                                           href={`${process.env.REACT_APP_URL}${item.imageUrl}`}>
+                                            <img className="photo__img" alt="" src={`${process.env.REACT_APP_URL}${item.imageUrl}`}/>
                                         </a>
                                         <button
                                             className="photo__edit banners__btn banners__btn_red" onClick={() => deleteGallery(item._id)}> Удалить

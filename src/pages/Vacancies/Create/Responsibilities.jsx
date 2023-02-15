@@ -29,7 +29,7 @@ const Responsibilities = ({responsibilities, setResponsibilities}) => {
     return (
         <div>
         <label htmlFor="">
-            <input value={text} onChange={(e) => setText(e.target.value) } type="text" placeholder='введите обязанности'/>
+            <input value={text} onChange={(e) => setText(e.target.value) } type="text" placeholder='введите желаемые способности'/>
             <button type='button' className="banners__btn banners__btn_green" onClick={addResponsibilities}>добавить</button>
         </label>
             <ul>

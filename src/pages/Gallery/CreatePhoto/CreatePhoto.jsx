@@ -34,8 +34,6 @@ const CreatePhoto = () => {
         })
     }
 
-
-
     return (
 
         <div className="create-photo">
@@ -46,6 +44,25 @@ const CreatePhoto = () => {
                         <h2>Создание фото</h2>
                         <label>
                             <input {...register('text')}  className="create-photo__title" type="text" placeholder="Введите название"/>
+                        </label>
+                        <label>
+                            Выберите филиал :
+                            <select {...register('branch', {
+                                required: {
+                                    message: 'Выберите филиал',
+                                    value: true
+                                }
+                            })}  className="location" >
+                                <option value="" className="location__item">Филиалы</option>
+                                <option  value="tsum" className="location__item">SMAGIC ЦУМ</option>
+                                <option value="tommy" className="location__item">SMAGIC ТОММИ МОЛ</option>
+                                <option value="techno" className="location__item">SMAGIC ТЕНХОПАРК</option>
+                                <option value="sky" className="location__item">SKY-PARK АЛА АРЧА</option>
+
+                            </select>
+                            <p className='register__form-error'>
+                                {errors.branch && errors.branch?.message}
+                            </p>
                         </label>
                         <DownloadBtn  status={'image'} images={images} setImages={setImages}/>
                         <button className="banners__btn banners__btn_green" type=' submit'>Создать</button>

@@ -87,30 +87,45 @@ const CreateVacancies = () => {
 
                          </label>
 
-                        <h3>Обязанности</h3>
+                        <h3>Желаемые способности</h3>
                         <Responsibilities responsibilities={responsibilities} setResponsibilities={setResponsibilities}/>
                         <h3>Требования</h3>
                         <Requirements requirements={requirements} setRequirements={setRequirements}/>
 
                     <label>
-                        Выберите филиал :
-                        <select {...register('branch', {
+                        <h3>Зарплата</h3>
+                        <input {...register('salary', {
                             required: {
-                                message: 'Выберите филиал',
+                                message: 'Зарплата вакансии обязательно к заполнению',
                                 value: true
+                            },
+                            minLength: {
+                                value: 5,
+                                message: "Минимум 5 символов"
                             }
-                        })}  className="location" >
-                            <option value="" className="location__item">Филиалы</option>
-                            <option  value="tsum" className="location__item">SMAGIC ЦУМ</option>
-                            <option value="tommy" className="location__item">SMAGIC ТОММИ МОЛ</option>
-                            <option value="techno" className="location__item">SMAGIC ТЕНХОПАРК</option>
-                            <option value="sky" className="location__item">SKY-PARK АЛА АРЧА</option>
-
-                        </select>
-                        <p className='register__form-error'>
-                            {errors.branch && errors.branch?.message}
+                        })} type="text" placeholder='Введите зарплату вакансии'/>
+                        <p>
+                            {errors.salary && errors.salary?.message}
                         </p>
                     </label>
+
+                    <label>
+                        <h3>График</h3>
+                        <input {...register('graph', {
+                            required: {
+                                message: 'График вакансии обязательно к заполнению',
+                                value: true
+                            },
+                            minLength: {
+                                value: 5,
+                                message: "Минимум 5 символов"
+                            }
+                        })} type="text" placeholder='Введите график вакансии'/>
+                        <p>
+                            {errors.graph && errors.graph?.message}
+                        </p>
+                    </label>
+
 
                         <button type='submit' className="banners__btn banners__btn_green">Создать вакансию</button>
                 </form>

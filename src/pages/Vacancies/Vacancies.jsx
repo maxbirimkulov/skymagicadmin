@@ -38,15 +38,12 @@ const Vacancies = () => {
                                           {item.description}
                                       </p>
                                   </div>
-                                  <p className='vacancies__location'>
 
-                                        <SelectBranch branch={item.branch}/>
-                                  </p>
                               </div>
                           ))
                       }
                   </div>
-                  <BranchMenu changeBranch={changeBranch} route={'vacancies'}/>
+
               </div>
 
 

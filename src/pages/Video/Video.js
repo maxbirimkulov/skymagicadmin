@@ -40,7 +40,7 @@ const Video = () => {
                         {
                             data.map((item) => (
                                 <div key={item._id} className='video__one'>
-                                    <video playsInline style={{width: "300px"}} src={`http://62.113.96.238:4444${item.videoUrl}`} controls ></video>
+                                    <video playsInline style={{width: "300px"}} src={`${process.env.REACT_APP_URL}${item.videoUrl}`} controls ></video>
                                     <p>Описание: {item.text}</p>
                                     <button
                                         className="photo__edit banners__btn banners__btn_red" onClick={() => deleteVideo(item._id)}> Удалить
