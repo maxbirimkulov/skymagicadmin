@@ -1,54 +1,29 @@
-.reviews{
-  padding-top: 50px;
-  &__content{
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
+.events-card{
+  padding: 10px 40px 30px;
+  color: white;
+  background: linear-gradient(#eac442, #e13a2d);
+  border-radius: 30px;
+  width: 44%;
+  &__title{
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 30px;
   }
-  &__card{
-    width: 100%;
-    padding: 20px 30px;
-    background: white;
-    position: relative;
-    &-title{
-      font-family: 'DIN Pro',sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      color: #111111;
-
-    }
-    &-text{
-      font-family: 'DIN Pro',sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 22px;
-      color: #000000;
-    }
-    &-top{
-      display: flex;
-      column-gap: 50px;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    &-time{
-      font-family: 'DIN Pro',sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      color: #A4ACAD;
-    }
-    &-del{
-      cursor: pointer;
-      padding: 7px 20px;
-      font-size: 15px;
-      border: none;
-      background: #640a0a;
-      color: #ffffff;
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-    }
+  &__title2{
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  &__description{
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  &__wrapper{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
   }
 }

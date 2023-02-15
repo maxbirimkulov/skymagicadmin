@@ -41,15 +41,15 @@ const Events = () => {
                    <h2 className='users__error'>{error}</h2>
                    <p>На экране выведен старый список баннеров</p>
                </div> : ''}
-               <div className="banners__content">
+               <div className="events-card__wrapper">
                    {
                        status === 'loading' ? '' : data.map((item) => (
-                           <div  className='banner' key={item._id}>
-                                   <h3 className='banner__title'>{item.title}</h3>
-                                   <h3 className='banner__title'>{item.title2}</h3>
+                           <div  className='events-card' key={item._id}>
+                                   <h3 className='events-card__title'>{item.title}</h3>
+                                   <h3 className='events-card__title2'>{item.title2}</h3>
 
 
-                               <p className='banner__description'>{item.text}</p>
+                               <p className='events-card__description'>{item.description}</p>
 
                                <button onClick={() => deleteEvents(item._id)} type='button' className='banner__del banners__btn banners__btn_red'>Удалить</button>
                            </div>

@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import "./Sales.scss"
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {toDate} from "../../utils/formatDate";
 import {getSales} from "../../redux/reducers/sales";
 import {toast, ToastContainer} from "react-toastify";
 const Events = () => {
@@ -17,17 +16,10 @@ const Events = () => {
     }, [filter])
 
 
-    // const deleteSales = (id) => {
-    //     axios.delete(`sales/${id}`)
-    //         .then(() => {
-    //             toast('Акция удалёна')
-    //             dispatch(getSales(filter))
-    //         })
-    //         .catch(() => toast('Не удалось удалить акцию'))
-    // }
 
     return (
         <section className="sales">
+            <h2 className="sales__title">Акции и события</h2>
             <div className="container">
                 <div className="sales__bar">
                     <button className="events__add banners__btn banners__btn_green" onClick={() => navigate(`/sales/create`)}>

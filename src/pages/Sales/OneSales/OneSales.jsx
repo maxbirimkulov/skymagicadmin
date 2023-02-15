@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import "./OneSales.scss"
 import {useNavigate, useParams, Navigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {getOneSales} from "../../../redux/reducers/oneSales";
