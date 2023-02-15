@@ -24,6 +24,12 @@ import EditVacancies from "./pages/Vacancies/Create/EditVacancies";
 import Requests from "./pages/Request/Requests";
 import Reviews from "./pages/Review/Reviews";
 import Click from "./pages/Click/Click";
+import Events from "./pages/Events/Events";
+import CreateEvents from "./pages/Events/CreateEvents/CreateEvents";
+import Sales from "./pages/Sales/Sales";
+import OneSales from "./pages/Sales/OneSales/OneSales";
+import CreateSales from "./pages/Sales/CreateSales/CreateSales";
+import EditSales from "./pages/Sales/EditSales/EditSales";
 
 
 
@@ -55,6 +61,12 @@ function App() {
                 <Route path={'video/create'} element={<CreateVideo/>}/>
                 <Route path={'requests'} element={<Requests/>}/>
                 <Route path={'reviews'} element={<Reviews/>}/>
+                <Route path={'events'} element={<Events/>}/>
+                <Route path={'events/create'} element={<CreateEvents/>}/>
+                <Route path={'sales'} element={<Sales/>}/>
+                <Route path={'sales/create'} element={<CreateSales/>}/>
+                <Route path={'sales/:id'} element={<OneSales/>}/>
+                <Route path={'sales/edit/:id'} element={<EditSales/>}/>
                 <Route path={'click'} element={<Click/>}/>
             </Route>
 

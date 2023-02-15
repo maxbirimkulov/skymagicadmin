@@ -23,9 +23,23 @@
     right: 0;
   }
   &__content{
+    height: 70%;
     transition: .5s;
     position: relative;
+    overflow-y: scroll;
     right: 0;
+    /* Demonstrate a "mostly customized" scrollbar
+     * (won't be visible otherwise if width/height is specified) */
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 8px;
+      background-color: #aaa; /* or add it to the track */
+    }
+
+    /* Add a thumb */
+    &::-webkit-scrollbar-thumb {
+      background: #0A293D;
+    }
   }
   &__title{
     margin-bottom: 10px;

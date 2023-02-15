@@ -11,6 +11,8 @@ const nav = [
     {text:'Отзывы',path:'/reviews',role:[]},
     {text:'Заявки',path:'/requests',role:[]},
     {text:'Клики',path:'/click',role:[]},
+    {text:'Акции и события',path:'/sales',role:[]},
+    {text:'Баннеры Главной стр',path:'/events',role:[]},
 ]
 
 export default nav

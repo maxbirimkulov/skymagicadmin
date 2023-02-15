@@ -1,0 +1,54 @@
+.reviews{
+  padding-top: 50px;
+  &__content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  &__card{
+    width: 100%;
+    padding: 20px 30px;
+    background: white;
+    position: relative;
+    &-title{
+      font-family: 'DIN Pro',sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      color: #111111;
+
+    }
+    &-text{
+      font-family: 'DIN Pro',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+    }
+    &-top{
+      display: flex;
+      column-gap: 50px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    &-time{
+      font-family: 'DIN Pro',sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      color: #A4ACAD;
+    }
+    &-del{
+      cursor: pointer;
+      padding: 7px 20px;
+      font-size: 15px;
+      border: none;
+      background: #640a0a;
+      color: #ffffff;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+}
