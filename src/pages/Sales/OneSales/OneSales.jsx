@@ -10,8 +10,7 @@ const OneSales = () => {
 
     const params = useParams()
 
-    const {sales, status ,error} = useSelector((store) => store.oneSales )
-
+    const {sales, status ,error} = useSelector((store) => store.oneSales)
     useEffect(() => {
         dispatch(getOneSales(params.id))
     }, [])
