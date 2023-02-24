@@ -18,7 +18,7 @@ export const getOneSales = createAsyncThunk(
 const oneSales = createSlice({
     name: "oneSales",
     initialState : {
-        banner : {},
+        sales : {},
         error : '',
         status : ''
     },

@@ -55,21 +55,7 @@ const Requests = () => {
                      }
                  </div>
                  <ul className='branch__menu'>
-                     <li className={`branch__item active`}>
-                         asdasdad
-                     </li>
-                     <li className={`branch__item`}>
-                        asdasdad
-                     </li>
-                     <li className={`branch__item `}>
-                         asdasdad
-                     </li>
-                     <li className={`branch__item `}>
-                         asdasdad
-                     </li>
-                     <li className={`branch__item `}>
-                         asdasdad
-                     </li>
+
 
                      {/*{*/}
                      {/*    branchMenuData.map((item, idx) => (*/}
