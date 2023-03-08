@@ -7,7 +7,8 @@ export const getBanners = createAsyncThunk(
     async (filter, {rejectWithValue}) => {
         try {
             const res = await axios(`/banners?${filter?.branch ? 'branch=' + filter.branch + '&' : ''}`)
-            if (res.statusText !== 'OK') {
+            console.log(res)
+            if (res.statusText !== 'OK' && res.status !== 200) {
                 throw new Error('Server error !')
             }
             return res.data

@@ -7,7 +7,7 @@ export const getRequests = createAsyncThunk(
     async (filter, {rejectWithValue}) => {
         try {
             const res = await axios(`/request?${filter?.branch ? 'branch=' + filter.branch + '&' : ''}`)
-            if (res.statusText !== 'OK') {
+            if (res.statusText !== 'OK'  && res.status !== 200) {
                 throw new Error('Server error !')
             }
             return res.data
