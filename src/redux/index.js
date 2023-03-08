@@ -20,6 +20,9 @@ import video from "./reducers/video";
 import reviews from "./reducers/reviews";
 import requests from "./reducers/requests";
 import click from "./reducers/click";
+import events from "./reducers/events";
+import sales from "./reducers/sales";
+import oneSales from "./reducers/oneSales";
 
 const rootReducer  = combineReducers({
     user,
@@ -32,7 +35,10 @@ const rootReducer  = combineReducers({
     video,
     reviews,
     requests,
-    click
+    click,
+    events,
+    sales,
+    oneSales
 })
 
 const persistConfig = {

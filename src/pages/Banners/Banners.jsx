@@ -32,14 +32,14 @@ const Banners = () => {
 
                 {error.length ? <div>
                     <h2 className='users__error'>{error}</h2>
-                    <p>На экране выведен старый список пользователей</p>
+                    <p>На экране выведен старый список баннеров</p>
                 </div> : ''}
 
                 <div className='banners__content'>
                     <div className="banners__wrapper">
                         {
                              status === 'loading' ? '' :data.map((item) => (
-                                        <div className="banner">
+                                        <div className="banner" key={item._id}>
                                             <div className="banner__img">
                                                 <img src={`${process.env.REACT_APP_URL}${item.images}`} alt={item.title}/>
                                             </div>

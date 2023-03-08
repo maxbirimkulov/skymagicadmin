@@ -6,6 +6,7 @@
   &__add{
     margin-bottom: 20px ;
   }
+
 }
 
 
@@ -14,7 +15,7 @@
     display: flex;
     column-gap: 30px;
     row-gap: 30px;
-
+    flex-wrap: wrap;
 
   }
   &__box{

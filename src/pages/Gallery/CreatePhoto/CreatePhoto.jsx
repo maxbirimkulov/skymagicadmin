@@ -53,7 +53,7 @@ const CreatePhoto = () => {
                                     value: true
                                 }
                             })}  className="location" >
-                                <option value="" className="location__item">Филиалы</option>
+                                <option value="" hidden={true} className="location__item">Филиалы</option>
                                 <option  value="tsum" className="location__item">SMAGIC ЦУМ</option>
                                 <option value="tommy" className="location__item">SMAGIC ТОММИ МОЛ</option>
                                 <option value="techno" className="location__item">SMAGIC ТЕНХОПАРК</option>
@@ -65,7 +65,7 @@ const CreatePhoto = () => {
                             </p>
                         </label>
                         <DownloadBtn  status={'image'} images={images} setImages={setImages}/>
-                        <button className="banners__btn banners__btn_green" type=' submit'>Создать</button>
+                        <button className="banners__btn banners__btn_green" type='submit'>Создать</button>
                     </form>
                 </div>
             </div>
