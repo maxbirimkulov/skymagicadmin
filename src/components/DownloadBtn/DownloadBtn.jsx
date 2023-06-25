@@ -29,7 +29,7 @@ const ClothesAddBtn = ({num,images,setImages,status}) => {
             {
                 images && (
                     <>
-                        {status === 'video' ? <video style={{width:'500px', margin: '0 20px', height: '300px'}} src={`${process.env.REACT_APP_URL}${images}`} controls></video> :     <img style={{width:'100px', margin: '0 20px'}} src={`http://62.113.96.238:4444${images}`} alt="Uploaded"/>}
+                        {status === 'video' ? <video style={{width:'500px', margin: '0 20px', height: '300px'}} src={`${process.env.REACT_APP_URL}${images}`} controls></video> :     <img style={{width:'100px', margin: '0 20px'}} src={`${process.env.REACT_APP_URL}${images}`} alt="Uploaded"/>}
 
                         <Button style={{width:'200px'}} onClick={() => setImages('')} type='button' variant="contained">Удалить картинку</Button>
                     </>

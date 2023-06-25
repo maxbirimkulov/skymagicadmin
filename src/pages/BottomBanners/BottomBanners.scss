@@ -1,0 +1,44 @@
+.bottomBanners{
+  background: #428bca;
+  height: 92%;
+  .container{
+    padding: 30px 20px;
+
+  }
+  .banners__bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .banners__btn{
+    padding: 7px 20px;
+    font-size: 15px;
+    border: none;
+    &_blue{
+      background: #104e85;
+      color: #ffffff;
+    }
+    &_green{
+      background: #0c6744;
+      color: #ffffff;
+    }
+    &_red{
+      background: #640a0a;
+      color: #ffffff;
+    }
+    &:hover{
+       color: #f8cf40;
+      transform: translateY(-5px);
+    }
+    &:active{
+      background: #f8cf40;
+    }
+  }
+
+  .bottomBanners__cont{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+  }
+}

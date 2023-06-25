@@ -22,7 +22,8 @@ const clickSlice = createSlice({
     initialState: {
         data: [],
         filter: {
-            branch: ''
+            branch: '',
+            time: 'all'
         },
         status: '',
         error: ''
@@ -32,6 +33,12 @@ const clickSlice = createSlice({
             state.filter = {
                 ...state.filter,
                 branch: action.payload
+            }
+        },
+        changeTime : (state, action) => {
+            state.filter = {
+                ...state.filter,
+                time : action.payload
             }
         }
     },
@@ -52,5 +59,5 @@ const clickSlice = createSlice({
     }
 })
 
-export const {changeBranch} = clickSlice.actions
+export const {changeBranch,changeTime} = clickSlice.actions
 export default clickSlice.reducer

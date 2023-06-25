@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+
+.editBottom {
+  background: #428bca;
+  height: 95%;
+  .container{
+    padding: 30px;
+  }
+  .create__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-wrapper{
+      background: rgba( 255, 255, 255, 0.25 );
+      width: 50%;
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 4px );
+      -webkit-backdrop-filter: blur( 4px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding:20px;
+      row-gap: 20px;
+      color: #ffffff;
+    }
+
+    input,textarea{
+      width: 400px;
+      padding: 10px 5px;
+      border: none;
+      font-size: 20px;
+      &:focus{
+        outline:  2px solid #f3b26a;
+      }
+    }
+    select {
+      &:focus{
+        outline:  2px solid #f3b26a;
+      }
+      width: 250px;
+      padding: 10px 5px;
+      border: none;
+
+    }
+  }
+}
+
+.banners__btn{
+  padding: 7px 20px;
+  font-size: 15px;
+  border: none;
+  &_blue{
+    background: #104e85;
+    color: #ffffff;
+  }
+  &_green{
+    background: #0c6744;
+    color: #ffffff;
+  }
+  &_red{
+    background: #640a0a;
+    color: #ffffff;
+  }
+  &:hover{
+    color: #f8cf40;
+    transform: translateY(-5px);
+  }
+  &:active{
+    background: #f8cf40;
+  }
+}

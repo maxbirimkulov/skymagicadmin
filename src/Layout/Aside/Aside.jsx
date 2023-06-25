@@ -15,9 +15,6 @@ const Aside = () => {
                 <h1 className='aside__title'>SKY MAGIC </h1>
                 <p className='aside__admin'>Admin Panel</p>
             </div>
-            <div className='aside__dashboard'>
-                <NavLink className='aside__link aside__link_top' to='/'>Dashboard <MdOutlineArrowForwardIos/></NavLink>
-            </div>
             <div className='aside__content'>
                 <h2 className='aside__main'>Main</h2>
 

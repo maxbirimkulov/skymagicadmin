@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import "./Banners.scss"
+import "../BottomBanners/BottomBanners.scss"
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import banners, {changeBranch, getBanners} from "../../redux/reducers/banners";

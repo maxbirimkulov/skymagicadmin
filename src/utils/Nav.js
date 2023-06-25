@@ -10,9 +10,10 @@ const nav = [
     {text:'Видео',path:'/video',role:[]},
     {text:'Отзывы',path:'/reviews',role:[]},
     {text:'Заявки',path:'/requests',role:[]},
-    {text:'Клики',path:'/click',role:[]},
+    {text:'Клики',path:'/',role:[]},
     {text:'Акции и события',path:'/sales',role:[]},
     {text:'Баннеры Главной стр',path:'/events',role:[]},
+    {text:'Баннеры нижней части',path:'/bottombanners',role:[]},
 ]
 
 export default nav

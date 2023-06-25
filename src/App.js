@@ -6,7 +6,7 @@ import Vacancies from "./pages/Vacancies/Vacancies";
 import Tickets from "./pages/Tickets/Tickets";
 import Orders from "./pages/Orders/Orders";
 import Users from "./pages/Users/Users";
-import Banners from "./pages/Banners/Banners";
+import BottomBanners from "./pages/BottomBanners/BottomBanners";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import OneUser from "./pages/Users/OneUser";
@@ -30,6 +30,7 @@ import Sales from "./pages/Sales/Sales";
 import OneSales from "./pages/Sales/OneSales/OneSales";
 import CreateSales from "./pages/Sales/CreateSales/CreateSales";
 import EditSales from "./pages/Sales/EditSales/EditSales";
+import EditBottomBanner from "./pages/BottomBanners/Create/EditBottomBanner";
 
 
 
@@ -41,7 +42,7 @@ function App() {
 
 
             <Route path={'/'} element={<Layout/>}>
-                <Route path={''} element={<Home/>}/>
+                <Route path={''} element={<Click/>}/>
                 <Route path={'vacancies'} element={<Vacancies/>}/>
                 <Route path={'tickets'} element={<Tickets/>}/>
                 <Route path={'orders'} element={<Orders/>}/>
@@ -50,7 +51,7 @@ function App() {
                 <Route path={'vacancies/:id'} element={<OneVacancies/>}/>
                 <Route path={'vacancies/create'} element={<CreateVacancies/>}/>
                 <Route path={'vacancies/edit/:id'} element={<EditVacancies/>}/>
-                <Route path={'banners'} element={<Banners/>}/>
+                <Route path={'banners'} element={<BottomBanners/>}/>
                 <Route path={'banners/create'} element={<Create/>}/>
                 <Route path={'banners/:id'} element={<OneBanner/>}/>
                 <Route path={'banners/edit/:id'} element={<Edit/>}/>
@@ -67,7 +68,8 @@ function App() {
                 <Route path={'sales/create'} element={<CreateSales/>}/>
                 <Route path={'sales/:id'} element={<OneSales/>}/>
                 <Route path={'sales/edit/:id'} element={<EditSales/>}/>
-                <Route path={'click'} element={<Click/>}/>
+                <Route path={'bottombanners'} element={<BottomBanners/>}/>
+                <Route path={'bottombanners/change/:id'} element={<EditBottomBanner/>}/>
             </Route>
 
             <Route path='/login' element={<Login/>}/>
