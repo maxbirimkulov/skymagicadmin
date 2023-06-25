@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 import Layout from "./Layout/Layout";
 import './styles/style.scss'
-import Home from "./pages/Home/Home";
+
 import Vacancies from "./pages/Vacancies/Vacancies";
 import Tickets from "./pages/Tickets/Tickets";
 import Orders from "./pages/Orders/Orders";
@@ -31,6 +31,7 @@ import OneSales from "./pages/Sales/OneSales/OneSales";
 import CreateSales from "./pages/Sales/CreateSales/CreateSales";
 import EditSales from "./pages/Sales/EditSales/EditSales";
 import EditBottomBanner from "./pages/BottomBanners/Create/EditBottomBanner";
+import Banners from "./pages/Banners/Banners";
 
 
 
@@ -51,7 +52,7 @@ function App() {
                 <Route path={'vacancies/:id'} element={<OneVacancies/>}/>
                 <Route path={'vacancies/create'} element={<CreateVacancies/>}/>
                 <Route path={'vacancies/edit/:id'} element={<EditVacancies/>}/>
-                <Route path={'banners'} element={<BottomBanners/>}/>
+                <Route path={'banners'} element={<Banners/>}/>
                 <Route path={'banners/create'} element={<Create/>}/>
                 <Route path={'banners/:id'} element={<OneBanner/>}/>
                 <Route path={'banners/edit/:id'} element={<Edit/>}/>
