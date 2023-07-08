@@ -4,6 +4,12 @@
  align-items: flex-start;
     column-gap: 20px;
   }
+  &__inputs{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+  }
   &__filter{
     display: flex;
     justify-content: center;
@@ -26,4 +32,8 @@
     }
   }
 
+}
+
+.css-e47596-MuiDateRangeCalendar-root div:first-child{
+  font-size: 10px!important;
 }

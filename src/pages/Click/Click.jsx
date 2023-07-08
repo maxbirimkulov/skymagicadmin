@@ -9,6 +9,7 @@ import {toast, ToastContainer} from "react-toastify";
 import {changeBranch} from "../../redux/reducers/click";
 import BranchMenuClick from "../../components/BranchMenuClick/BranchMenuClick";
 import {filterClick} from "../../redux/reducers/selectors/clicks";
+import DateRange from "./DateRange/DateRange";
 
 const Click = () => {
     const navigate = useNavigate()
@@ -19,7 +20,9 @@ const Click = () => {
     useEffect(() => {
         dispatch(getClick(filter))
 
-    }, [filter])
+    }, [filter.time, filter.free])
+
+
 
     // let arr = data.map(el => `${el.url}`)
     //     const getUnique = (arr) => {
@@ -34,7 +37,15 @@ const Click = () => {
                 <button onClick={() => dispatch(changeTime('week'))}  className={`click__filter-btn ${filter.time === 'week' ? 'active' :''}`}>За последнию неделю</button>
                 <button onClick={() => dispatch(changeTime('month'))}  className={`click__filter-btn ${filter.time === 'month' ? 'active' :''}`}>За последний месяц</button>
                 <button onClick={() => dispatch(changeTime('all'))}  className={`click__filter-btn ${filter.time === 'all' ? 'active' :''}`}>За все время</button>
+                <button onClick={() => dispatch(changeTime('free'))}  className={`click__filter-btn ${filter.time === 'free' ? 'active' :''}`}>Произвольная дата</button>
             </div>
+
+            {
+                filter.time === 'free' ? <div className='click__inputs'>
+                        <DateRange/>
+                </div> : ''
+            }
+
             <div className="container">
 
 
